@@ -6,6 +6,13 @@ pipeline {
                    branch: 'master'
             }
     }
+    stage('build stage') {
+        steps {
+               sh dotnet restore src/NopCommerce.sln
+               sh dotnet build -c Release src/NopCommerce.sln
+        }
+
+    }
 
    }
 
