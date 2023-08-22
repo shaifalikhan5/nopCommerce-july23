@@ -18,7 +18,7 @@ pipeline {
     }
     stage('artifact') {
         steps {
-            archive artifacts: '**/NopCommerce.zip'
+            archiveArtifacts artifacts: '**/NopCommerce.zip'
         }
     }
 
