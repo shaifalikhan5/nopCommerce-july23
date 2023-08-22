@@ -8,8 +8,8 @@ pipeline {
     }
     stage('build stage') {
         steps {
-               sh dotnet restore src/NopCommerce.sln
-               sh dotnet build -c Release src/NopCommerce.sln
+               sh script 'dotnet restore src/NopCommerce.sln'
+               sh script 'dotnet build -c Release src/NopCommerce.sln'
         }
 
     }
