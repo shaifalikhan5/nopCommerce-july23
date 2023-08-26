@@ -14,7 +14,8 @@ pipeline {
             steps {
             sh 'dotnet restore src/NopCommerce.sln'
             sh 'dotnet build -c Release src/NopCommerce.sln'
-            sh 'dotnet build -c Release src/Presentation/Nop.Web.csproj -o publish' 
+            sh 'dotnet build -c Release src/Presentation/Nop.Web.csproj -o publish'
+            sh 'mkdir publish/bin publish/logs' 
             }
             
 
